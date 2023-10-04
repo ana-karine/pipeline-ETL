@@ -1,13 +1,15 @@
-# [Lab Project DIO - Santander Bootcamp 2023 - Ciência de Dados com Python](https://web.dio.me/project/explorando-ia-generativa-em-um-pipeline-de-etl-com-python/learning/691df7f1-e1ad-4fc7-b643-0d800ea3fee2?back=/track/santander-bootcamp-2023-ciencia-de-dados-com-python&tab=path&moduleId=undefined) 
-**Explorando IA Generativa em um Pipeline de ETL com Python**
----
+# [Lab Project DIO - Santander Bootcamp 2023 - Ciência de Dados com Python](https://web.dio.me/project/explorando-ia-generativa-em-um-pipeline-de-etl-com-python/learning/691df7f1-e1ad-4fc7-b643-0d800ea3fee2?back=/track/santander-bootcamp-2023-ciencia-de-dados-com-python&tab=path&moduleId=undefined)
+
+## **Explorando IA Generativa em um Pipeline de ETL com Python**
 
 &nbsp;
 
-## 🏆 Desafio:
+## 🏆 Desafio
 Construir um pipeline ETL (Extração, Transformação e Carregamento), demonstrando a relação entre dados, Inteligência Artificial (IA) e APIs. 
+
 &nbsp;
-## ✏️ Etapas ETL:
+
+## ✏️ [Etapas ETL](#etapas_etl)
 - [Extract (Extração)](#extract)
 	* Pandas e consumo de API REST (GET)
 - [Transform (Transformação ou Enriquecimento)](#transform)
@@ -45,7 +47,7 @@ def get_user(id):
 users = [user for id in user_ids if (user := get_user(id)) is not None]
 print(json.dumps(users, indent=2))
 ```
-[Topo](#extract)
+[Topo](#etapas_etl)
 
 ## Transform 
 Adentramos o universo da IA com o GPT-3 da OpenAI, transformando esses dados em mensagens personalizadas de marketing. 
@@ -92,7 +94,7 @@ for user in users:
       "description": news
   })
 ```
-[Topo](#transform)
+[Topo](#etapas_etl)
 
 ## Load 
 Finalizamos o processo enviando essas mensagens de volta para a API da [Santander Dev Week 2023](https://sdw-2023-prd.up.railway.app/swagger-ui/index.html). Este passo ilustra como dados transformados são reintegrados em sistemas, completando o ciclo de um pipeline ETL.
@@ -108,8 +110,10 @@ for user in users:
   success = update_user(user)
   print(f"User {user['name']} updated? {success}!")
 ```
-[Topo](#load)
+[Topo](#etapas_etl)
+
 &nbsp;
-## 🔍 Referências:
+
+## 🔍 Referências
 - [colab.research.google.com](https://colab.research.google.com/drive/1SF_Q3AybFPozCcoFBptDSFbMk-6IVGF-?usp=sharing): link do Notebook criado via Google Colab com todo o **código-fonte original** deste Desafio de Projeto (Lab);
 - [github.com/digitalinnovationone](https://github.com/digitalinnovationone/santander-dev-week-2023-api): GitHub com a API desenvolvida para a Santander Dev Week 2023 com informações úteis (incluindo o link do Swagger e dados importantes sobre a disponibilidade da API).
