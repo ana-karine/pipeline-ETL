@@ -9,7 +9,7 @@ Construir um pipeline ETL (Extração, Transformação e Carregamento), demonstr
 
 &nbsp;
 
-## ✏️ [Etapas ETL](#etapas_etl)
+## ✏️ Etapas ETL
 - [Extract (Extração)](#extract)
 	* Pandas e consumo de API REST (GET)
 - [Transform (Transformação ou Enriquecimento)](#transform)
@@ -47,7 +47,7 @@ def get_user(id):
 users = [user for id in user_ids if (user := get_user(id)) is not None]
 print(json.dumps(users, indent=2))
 ```
-[Topo](#etapas_etl)
+[Topo](#extract)
 
 ## Transform 
 Adentramos o universo da IA com o GPT-3 da OpenAI, transformando esses dados em mensagens personalizadas de marketing. 
@@ -94,7 +94,7 @@ for user in users:
       "description": news
   })
 ```
-[Topo](#etapas_etl)
+[Topo](#extract)
 
 ## Load 
 Finalizamos o processo enviando essas mensagens de volta para a API da [Santander Dev Week 2023](https://sdw-2023-prd.up.railway.app/swagger-ui/index.html). Este passo ilustra como dados transformados são reintegrados em sistemas, completando o ciclo de um pipeline ETL.
@@ -110,7 +110,7 @@ for user in users:
   success = update_user(user)
   print(f"User {user['name']} updated? {success}!")
 ```
-[Topo](#etapas_etl)
+[Topo](#extract)
 
 &nbsp;
 
